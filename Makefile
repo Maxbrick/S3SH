@@ -33,16 +33,13 @@ include $(DEVKITARM)/3ds_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	source source/tsm
+SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 GRAPHICS	:=	gfx
 #GFXBUILD	:=	$(BUILD)
 ROMFS		:=	romfs
 GFXBUILD	:=	$(ROMFS)/gfx
-APP_TITLE	:= S3SH
-APP_DESCRIPTION := A 3DS SSH Client
-APP_AUTHOR	:= haxorguyorsomethingidk
 
 #---------------------------------------------------------------------------------
 # options for code generation
