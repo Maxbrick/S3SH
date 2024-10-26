@@ -40,6 +40,9 @@ GRAPHICS	:=	gfx
 #GFXBUILD	:=	$(BUILD)
 ROMFS		:=	romfs
 GFXBUILD	:=	$(ROMFS)/gfx
+APP_TITLE	:= S3SH
+APP_DESCRIPTION := A 3DS SSH Client
+APP_AUTHOR	:= haxorguyorsomethingidk
 
 #---------------------------------------------------------------------------------
 # options for code generation
