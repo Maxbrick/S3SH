@@ -23,15 +23,18 @@ constexpr int NUM_KEYS = 56;
 class keyboard
 {
     public:
-        
-        void async_keyboard(std::function<void()> &func, std::function<void( char )> cb, bool de);
-        keyboard(std::function<void()> &func, std::function<void( char )> cb);
+        keyboard(std::function<void()> &func, std::function<void(char)> cb, bool de);
         ~keyboard();
-        void async();
         std::string get_input();
         std::string get_input_async();
         bool has_data() { return !input.empty(); };
         void disable_local_echo() { echo = false; };
+        bool has_enter_been_pressed()
+        { 
+            bool value = was_enter_clicked; 
+            was_enter_clicked = !was_enter_clicked; 
+            return value; 
+        };
 
     private:
     // Normal Keyboard
